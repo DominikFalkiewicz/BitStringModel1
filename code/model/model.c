@@ -562,7 +562,7 @@ void save_data(struct envi* map, const char *path){
 			save_field(data_file, get_field(map, i, j));
 			printf("Saving %d/%d\n", i*S+j+1, m);
 		}
-		fprintf(data_file, ":");
+		fprintf(data_file, "\n");
 	}
 	fclose(data_file);
 }
@@ -592,7 +592,7 @@ void run_simulation(int iterations, float R, const char *data_path, const char *
 			n = count_animals(map);
 			fprintf(population_file, "%d,", n);
 			if(n == 0){
-				fprintf(population_file, "X;");
+				fprintf(population_file, "X\n");
 				drop_envi(map);
 				break;
 			}
@@ -604,7 +604,7 @@ void run_simulation(int iterations, float R, const char *data_path, const char *
 	
 	//Appending organism number to population file. This file can be used to track population growth
 	//through multiple simulations.
-	fprintf(population_file, ";");
+	fprintf(population_file, "\n");
 	fclose(population_file);
 	
 	//Saving population state at final step.
