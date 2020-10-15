@@ -1,0 +1,43 @@
+The model returns 3 types of data:
+
+-Bitmap depicting population at the final time step of the
+simulation. How the images are generated was descibed in the
+article and can be easly deduced from source code in code/model
+directory.
+
+-Text file containing data about population in the final time step
+of the simulation. This includes genomes of all living organisms.
+--Rows of the simulation grid are separated by collons in old
+version and new lines in current version.
+--Fields are separated by semicollons.
+--Empty fields are represented by 'X'.
+--Organisms are represented by two strings of zeros and ones
+separaded by comma.
+
+-Current number of organisms is appened to a text firl that can be
+used to look at population growth in several simulations with
+diferent parameters.
+--At each time step numebr of organisms currently alife is appened
+followe by comma.
+--If no organisms are alife 'X;' is appended in old version and 
+'X\n' is appended in new version. Simulation is then restarted.
+--At each of the simmuations succesfully finnished semicollon is
+appended in the old version and new line is appended in the new
+version.
+
+Output had been changed due to technical difficulties. Data
+presented here is generated in old output while code is set to
+generate new output.
+
+500_steps_1000_grid.zip contains data from 5 sets of simulations
+including population files corresponding to them. Simulations
+were conducted on 1000x1000 grid and lasted 500 time steps.
+
+20000_steps_250_grid.zip contains data from 5 sets of simulations
+without population files. Simulations were conduced on 250x250 grid
+and lasted 20000 time steps. This data is used in the article.
+
+Each file name in form A_B_CCC.xxx indicates parameters used in the
+simulation. A indicates C, B indicates F and CCC indicates R.
+
+For each simulation D=0.02, G=64, M=1.

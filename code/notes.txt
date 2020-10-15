@@ -1,0 +1,2 @@
+"model" directory contains bit-string model implementation.
+"packages" directory contains ezdib library from "https://www.codeproject.com/articles/363908/simple-two-file-graphics-library-for-c-cplusplus".
